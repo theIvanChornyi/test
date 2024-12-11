@@ -1,0 +1,44 @@
+.section {
+  min-height: 100vh;
+  background-color: var(--main-bg-color);
+  position: relative;
+}
+
+.header {
+  margin: 16px auto;
+  text-align: center;
+}
+.goBack{
+  display: block;
+  margin-top: 16px;
+
+  font-family: var(--main-text-family);
+  color: var(--text-primary-accent);
+  text-decoration: none;
+}
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 320px;
+  padding: 23px 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  background-color: var(--modal-bg);
+  border-radius: 10px;
+}
+
+.input{
+  margin-top: 16px;
+  padding: 6px 8px;
+
+  font-family: -var(--main-text-family);
+  font-size: 16px;
+
+  border: none;
+  border-radius: 8px;
+}

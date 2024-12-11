@@ -1,0 +1,27 @@
+.inputWrapper{
+  display: grid;
+  flex-grow: 1;
+}
+
+.balanceWrapper{
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  padding: 6px 8px;
+
+
+}
+
+.balanceValue {
+  font-family: var(--main-text-family);
+  font-size: 16px;
+}
+
+.errorMessage {
+  max-width: 200px;
+  margin-top: 8px;
+  color:red;
+  &::first-letter {
+      text-transform: uppercase !important;
+  }
+}

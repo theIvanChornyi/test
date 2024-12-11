@@ -1,0 +1,28 @@
+.page {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+
+  background-color: var(--main-bg-color);
+
+  @media (max-width: 600px) { 
+  flex-direction: column-reverse;  
+    
+  } 
+}
+.mainSection{ 
+  flex-grow: 1;
+}
+
+.input{
+  margin-top: 16px;
+  padding: 6px 8px;
+
+  font-family: -var(--main-text-family);
+  font-size: 16px;
+
+  border: none;
+  border-radius: 8px;
+}

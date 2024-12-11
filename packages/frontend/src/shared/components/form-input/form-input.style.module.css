@@ -1,0 +1,15 @@
+.inputWrapper{
+  display: grid;
+  flex-grow: 1;
+  position: relative;
+
+}
+.errorMessage {
+  max-width: 200px;
+  margin-top: 8px;
+  color:red;
+  &::first-letter {
+      text-transform: uppercase !important;
+  }
+
+}

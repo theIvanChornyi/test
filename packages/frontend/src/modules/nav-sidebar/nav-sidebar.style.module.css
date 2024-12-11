@@ -1,0 +1,24 @@
+.title {
+  font-family: var(--title-text-family);
+}
+
+.linkList {
+  margin-top: 64px;
+}
+
+.navLink {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 10px;
+
+  color: var(--text-main);
+  font-family: var(--main-text-family);
+  text-decoration: none;
+
+  transition: background-color 200ms linear;
+
+  &:hover, &:active {
+    background-color: #d3e1f5;
+    color: var(--text-main);
+  }
+}

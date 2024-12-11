@@ -1,0 +1,38 @@
+.wrapper {
+  margin: 20px auto 0;
+  width: 100%;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, 1fr));
+  gap: 16px;
+}
+
+.widgetButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+
+  color: var(--text-main);
+  font-family: var(--main-text-family);
+}
+
+.buttonIco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  background: var(--main-accent-gradient);
+  border-radius: 8px;
+}

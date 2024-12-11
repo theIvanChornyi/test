@@ -1,0 +1,42 @@
+:root {
+  /* Backgrounds */
+  --main-bg-color: #fafbfc;
+  --secondary-bg-color: #eceff2;
+  --modal-bg: #d3e1f5;
+  --hover-bg: #d3e1f5;
+
+  /* Text */
+
+  --text-main: #050624;
+  --text-light:#FAFBFC;
+  --text-primary-accent: #3D7AE5;
+
+  /* Other */
+  --main-accent-color: #141736;
+  --main-accent-gradient:linear-gradient(90deg, #3e79e5 0%, #01b8e3 100%);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

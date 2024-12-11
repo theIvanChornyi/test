@@ -1,0 +1,29 @@
+.section {
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+
+}
+.tableWrapper {
+  margin-top: 20px;
+  width: 100%;
+  overflow-x: auto;
+}
+.table {
+  width: 100%; 
+  min-width: 600px
+
+  
+}
+.table th, .table td {
+  border: 1px solid #ccc;
+}
+
+.buttonsList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 300px;
+  margin: 20px auto 0;
+}

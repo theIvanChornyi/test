@@ -1,0 +1,5 @@
+.sidebar{
+  min-height: 100vh;
+  padding: 32px;
+  background-color: var(--secondary-bg-color);
+}
