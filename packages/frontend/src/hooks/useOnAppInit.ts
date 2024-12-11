@@ -2,7 +2,7 @@ import axios from "axios"
 import { useEffect } from "react"
 
 const createNewUser = async(): Promise<void> => {
-    const { data: newUser } = await axios.post(`${process.env.BACKEND_URL}/user/create`)
+    const { data: newUser } = await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/user/create`)
     localStorage.setItem('bank-user', newUser.id)
 }
 
@@ -12,7 +12,7 @@ const onPageInit = async (): Promise<void> => {
     if (!userId) {
       await createNewUser()
     } else {
-      const {data:currentUser} = await axios.get(`${process.env.BACKEND_URL}/user/${userId}`)
+      const {data:currentUser} = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/user/${userId}`)
       localStorage.setItem('bank-user', currentUser.id)
     }
   } catch {

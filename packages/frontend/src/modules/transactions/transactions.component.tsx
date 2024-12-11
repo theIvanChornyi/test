@@ -27,7 +27,7 @@ const Transactions: FC<IProps> = ({ style }) => {
   })
 
    const getUserTransactions = useCallback(async () => {
-     const { data } = await axios.get(`${process.env.BACKEND_URL}/transaction`, {
+     const { data } = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/transaction`, {
        params: {
         page,
         userId

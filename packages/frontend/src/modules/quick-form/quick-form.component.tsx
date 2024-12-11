@@ -22,14 +22,14 @@ const QuickForm = () => {
   
 
   const getUserIbans = useCallback(async () => {
-    const { data } = await axios.get<Array<UserIban>>(`${process.env.BACKEND_URL}/iban/${userId}`)
+    const { data } = await axios.get<Array<UserIban>>(`${process.env.NEXT_PUBLIC_BACKEND_URL}/iban/${userId}`)
     setUserIbans(data)
   }, [userId])
   
   const createTransaction = async (formData: IQuickForm, helpers: FormikHelpers<IQuickForm>) => {
     const data = {userId,...formData,}
     try {
-      await axios.post(`${process.env.BACKEND_URL}/transaction/create`, data)
+      await axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/transaction/create`, data)
       helpers.resetForm()
       Notify.success(MESSAGES.SUCCESS)
     } catch {
