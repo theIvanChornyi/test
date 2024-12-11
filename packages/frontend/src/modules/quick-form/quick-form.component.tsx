@@ -1,6 +1,6 @@
 'use client'
 import axios from "axios"
-import { FC, useCallback, useEffect, useState } from "react"
+import {  useCallback, useEffect, useState } from "react"
 import { FormikHelpers, FormikProvider, useFormik } from "formik"
 import Button from "../../shared/components/button/button.component"
 import Title from "../../shared/components/title/title.component"
@@ -15,24 +15,21 @@ import { useUserId } from "../../hooks/useUserId"
 import { Notify } from "notiflix"
 import { ERROR_MESSAGES, MESSAGES } from "../../shared/mesages.const"
 
-interface IProps {
-  useID:string| null
-}
-const QuickForm:FC<IProps> = () => {
+const QuickForm = () => {
 
   const userId = useUserId()
   const [userIbans, setUserIbans] = useState<Array<UserIban>>([])
   
 
   const getUserIbans = useCallback(async () => {
-    const { data } = await axios.get<Array<UserIban>>(`http://localhost:8080/iban/${userId}`)
+    const { data } = await axios.get<Array<UserIban>>(`${process.env.BACKEND_URL}/iban/${userId}`)
     setUserIbans(data)
   }, [userId])
   
   const createTransaction = async (formData: IQuickForm, helpers: FormikHelpers<IQuickForm>) => {
     const data = {userId,...formData,}
     try {
-      await axios.post(`http://localhost:8080/transaction/create`, data)
+      await axios.post(`${process.env.BACKEND_URL}/transaction/create`, data)
       helpers.resetForm()
       Notify.success(MESSAGES.SUCCESS)
     } catch {

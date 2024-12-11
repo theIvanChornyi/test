@@ -19,7 +19,7 @@ export default function AddIban() {
 
   const addNewIban = async(data:IAddIbanFrom, helpers:FormikHelpers<IAddIbanFrom>) => {
     try {
-      await axios.post('http://localhost:8080/iban/add', {
+      await axios.post(`${process.env.BACKEND_URL}/iban/add`, {
       iban:data.iban,
       userId
       })

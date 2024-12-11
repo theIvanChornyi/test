@@ -23,7 +23,7 @@ export default function Deposit() {
   
 
   const getUserIbans = useCallback(async () => {
-    const { data } = await axios.get<Array<UserIban>>(`http://localhost:8080/iban/${userId}`)
+    const { data } = await axios.get<Array<UserIban>>(`${process.env.BACKEND_URL}/iban/${userId}`)
     setUserIbans(data)
   },[userId])
 
@@ -36,7 +36,7 @@ export default function Deposit() {
   
   const makeWithdraw = async (data: IMakeWithdraw, helpers: FormikHelpers<IMakeWithdraw>) => {
     try {
-      await axios.post('http://localhost:8080/payment/withdraw', data)
+      await axios.post(`${process.env.BACKEND_URL}/payment/withdraw`, data)
        helpers.resetForm()
        Notify.success("created")
      } catch {
